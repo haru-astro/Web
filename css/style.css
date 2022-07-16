@@ -1,5 +1,39 @@
-h1 {
-    color:#DE6641;
-    font-size: 30px;
-    font-family:'Courier New', Courier, monospace;
+body {
+    margin: 0px;padding:0px;
+    font-family: "ＭＳＰゴシック";
+    font-size: 16px;
+    line-height: 2;
+    color: #666;
+    background-color: #fff;
+}
+
+#header {
+	position: fixed;	/*ヘッダーを上部に固定する指定*/
+	z-index: 1;
+	left: 0px;			/*左からの配置場所の指定*/
+	top: 0px;			/*上からの配置場所の指定*/
+	width: 100%;		/*幅*/
+	background: #000;	/*背景色*/
+	font-size: 13px;	/*文字サイズ*/
+	height: 60px;	
+}
+
+nav {
+	width: 100%;
+	height: 70px;
+	background-color: dimgray;
+	padding-top: 5px;
+	box-sizing: border-box;
+}
+ul {
+	display: flex;
+}
+li {
+	list-style: none;
+}
+a  {
+	display: block;
+	text-decoration: none;
+	color: white;
+	margin-right: 35px;
 }

@@ -8,51 +8,37 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="title">光がシャトルランすると何回できるのか</h1>
-    <p>先日、Youtuberはなおさんの「【おとな科学相談】もし光がシャトルランしたら何回までいけるの？パソコン使ってガチガチに計算したらとんでもない結果にｗｗｗｗｗｗ」という動画を見ました。</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/LI1xRb0WlxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>その動画では光は97京9700兆140億回できると結論付けられてました。</p>
-    <p>動画内ではシャトルランの回数と速度には関係があることが述べられており、それを利用して光の関数を近似していました。</p>
-    <p>ならば私はプログラミングで正確に求めることも可能ではないかと思いました。</p>
-    <p>なので実装していきたいと思います。</p>
-    <p>レギュレーション</p>
-    <ul>
-        <li>レベル毎の移動時間が60を超えたらレベルが1つ上がる</ul>
-        <li>シャトルランはレベルが上がるごとに0.5km/hずつ上がる</ul>
-        <li>レベル1は8.0km/h、レベル2は9.0km/hでそこからは0.5km/hずつ上がる</ul>
-    </ul>
-    <p>コードを紹介します</p>
-    <pre><code>
-        #単位はkm/h
-        #折り返しの時間は考えないものとする
-        
-        c = 1079252849
-        start = 9.0
-        dif = 0.5
-        time = 0.02/start
-        kaisuu = 7
-        
-        while start <= c:
-            time = 0.02/start
-            num = 0
-            um = 0
-            while um <= 1/60:
-                num += 1
-                um = time * num   
-            start = start + dif
-            kaisuu = kaisuu + num
-        else:
-            print(kaisuu)</code></pre>
-    <p>解説していきます。</p>
-    <p>startという変数に速度を入れます。</p>
-    <p>whileでstartが光速cを超えるまで繰り返し処理を行います。</p>
-    <p>繰り返しではumという変数に経過時間、numという変数にそのレベルで何回行ったかを入れます。(一回繰り返すごとに1を足していく)</p>
-    <p>umが60sを超えたらstartに0.5を足す、kaisuuという変数にnumを足して回数の総和を求めるというものになってます。</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a class="header" href="index.html">HOME</a></li>
+                <li><a class="header" href="cv.html">略歴・業績</a></li>
+                <li><a class="header" href="research.html">研究</a></li>
+                <li><a class="header" href="blog.html">ブログ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <p>ただ、このコードを見てわかる通り光速は1079252849です。</p>
-    <p>初期値9.0(レベル1を除く)から何回0.5を足せば光速になるでしょうか。</p>
-    <p>(1079252849-9)/0.5=2158505680</p>
-    <p>処理するのに何時間かかるでしょうか…</p>
-    <p>誰かやってください。</p>
+    <section id="profile">
+        <title>早川晴のホームページ</title> 
+        <h2>プロフィール</h2>
+        <h3>早川晴</h3>
+        <p>天文学を志している高校2年生です。YSF天文部で13th部長を務めています。</p>
+        <table>
+            <tbody>
+                <tr><td style="padding-left:40px; padding-right:20px;">所属</td><td>横浜市立横浜サイエンスフロンティア高等学校</td></tr>
+                <tr><td style="padding-left:40px; padding-right:20px;">住所</td><td>横浜市鶴見区小野町6番地</td></tr>
+                <tr><td style="padding-left:40px; padding-right:20px;">E-mail</td><td>hayakawa14959@gmail.com</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="information">
+        <h2>更新情報・お知らせ</h2>
+        <dl>
+            <dt>2022/6/4</dt>
+            <dd>ホームページ開設</dd>
+        </dl>
+    </section>
 </body>
 </html>
